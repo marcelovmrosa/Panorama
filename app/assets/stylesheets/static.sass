@@ -1,3 +1,40 @@
-// Place all the styles related to the static controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap-sprockets'
+@import 'bootstrap'
+
+html,body
+  width: 100%
+  height: 100%
+  font-family: "Courier New", courier,monospace
+
+.header
+  display: table
+  position: relative
+  width: 100%
+  height: 100%
+  background-image: url('img01.jpg')
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+  -o-background-size: cover
+
+.text-vertical-center
+  display:table-cell
+  text-align: center
+  vertical-align: middle
+  padding-top: 120px
+  padding-bottom: 60px
+
+.text-vertical-center h1
+  margin-bottom: 25px
+  font-size: 4.5em
+  font-weight: 700
+
+.text-vertical-center h3
+  margin-bottom: 25px
+  font-size: 25px
+  font-weight: 700
+
+.btn-dark
+  border-radius: 0
+  color: #fff
+  background-color: rgba(0, 0, 0, .4)
