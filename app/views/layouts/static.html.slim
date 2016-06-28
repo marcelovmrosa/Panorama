@@ -8,4 +8,18 @@ html
   = csrf_meta_tags
 
   body
+  .header
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed type="button"  data-toggle="collapse" data-target="#navButton" 
+            | Menu 
+            i.fa.fa-bars   
+          .navbar-brand
+           = link_to "Panorama", root_path, id:"logotipo" 
+          
+        .collapse.navbar-collapse#navButton
+          ul.nav.navbar-nav.navbar-right
+            li = link_to "Sobre", about_path, id:"info"
+    
     = yield
