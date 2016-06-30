@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+  title Panaroma
+
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+  body
+  .header
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle type="button"  data-toggle="collapse" data-target="#navButton" 
+            .glyphicon.glyphicon-menu-hamburger
+                
+          .navbar-brand
+           = link_to "Panorama", root_path, id:"logotipo" 
+        
+        ul.nav.navbar-nav.navbar-right.top-nav#right
+          li = link_to root_path do 
+            .glyphicon.glyphicon-dashboard
+            | Panorama
+          li = link_to root_path do
+            .glyphicon.glyphicon-dashboard
+            | Panorama  
+            
+        .collapse.navbar-collapse#navButton
+          ul.nav.navbar-nav.side-nav#side
+            li.active = link_to root_path do
+              .glyphicon.glyphicon-dashboard
+              | Panorama
+            li = link_to root_path do
+              .glyphicon.glyphicon-dashboard
+              | Panorama
+            li = link_to root_path do
+              .glyphicon.glyphicon-dashboard
+              | Panorama  
+            li = link_to root_path do
+              .glyphicon.glyphicon-dashboard
+              | Panorama  
+            li = link_to root_path do
+              .glyphicon.glyphicon-dashboard
+              | Panorama  
+            li = link_to root_path do
+              .glyphicon.glyphicon-dashboard
+              | Panorama  
+
+  = yield
