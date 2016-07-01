@@ -1,35 +1,35 @@
 @import 'bootstrap-sprockets'
 @import 'bootstrap'
 
+body
+  margin-top: 100px
 
-#right
+#logotipo
+  text-decoration: none
+  color: #999
+
+i
+  margin-right: 5px
+
+.navright
   padding: 0 15px
 
-#right li
+.navright > li
   display: inline-block
+  float: left
 
-
-#right li a
+.navright > li > a
   padding-top: 15px
   padding-bottom: 15px
   line-height: 20px
   color: #999
 
-#right li a:hover, #right li a:focus, #right a, #right a:hover,#right a:focus
+.navright > li > a:hover, .navright > li > a:focus, .navright > a, .navright > a:hover, .navright > a:focus
   color: #fff
-  background-color: #000
+  background-color: #000 !important
 
-#right
-  position: absolute
-  margin-top: 0
-  border: 1px solid rgba(0, 0, 0, 0.15)
-  border-top-left-radius: 0
-  border-top-right-radius: 0
-  background-color: #fff
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
 
-#side
+.navside
   position: fixed
   top: 51px
   left: 225px
@@ -43,21 +43,21 @@
   overflow-x: hidden
   padding-bottom: 40px
 
-#side li a
+.navside > li > a
   width: 225px
 
-#side li a:hover, #side li a:focus
+.navside > li > a:hover, .navside > li > a:focus
   outline: none
-  background-color: #000
+  background-color: #000 !important
 
-#side li ul
+.navside li > ul
   padding: 0
 
-#side li ul li a
+.navside li > ul > li > a
   display: block
   padding: 10px 15px 10px 38px
   text-decoration: none
   color: #999
 
-#side li ul li a:hover
+.navside > li > ul > li > a:hover
   color: #fff
