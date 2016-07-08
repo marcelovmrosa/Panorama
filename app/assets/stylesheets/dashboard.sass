@@ -8,6 +8,9 @@ body
   text-decoration: none
   color: #999
 
+button
+  color: white
+
 i
   margin-right: 5px
 
@@ -28,27 +31,27 @@ i
   color: #fff
   background-color: #000 !important
 
+@media(min-width:768px)
+  .navside
+    position: fixed
+    top: 51px
+    left: 225px
+    width: 225px
+    margin-left: -225px
+    border: none
+    border-radius: 0
+    overflow-y: auto
+    background-color: #222
+    bottom: 0
+    overflow-x: hidden
+    padding-bottom: 40px
 
-.navside
-  position: fixed
-  top: 51px
-  left: 225px
-  width: 225px
-  margin-left: -225px
-  border: none
-  border-radius: 0
-  overflow-y: auto
-  background-color: #222
-  bottom: 0
-  overflow-x: hidden
-  padding-bottom: 40px
+  .navside > li > a
+    width: 225px
 
-.navside > li > a
-  width: 225px
-
-.navside > li > a:hover, .navside > li > a:focus
-  outline: none
-  background-color: #000 !important
+  .navside > li > a:hover, .navside > li > a:focus
+    outline: none
+    background-color: #000 !important
 
 .navside li > ul
   padding: 0

@@ -9,15 +9,15 @@ html
 
   body
   .header
-    .navbar.navbar-default
+    .navbar.navbar-default role="navigation"
       .container-fluid
         .navbar-header
-          button.navbar-toggle type="button"  data-toggle="collapse" data-target="#navButton" 
+          button.navbar-toggle type="button"  data-toggle="collapse" data-target=".navButton" 
             .glyphicon.glyphicon-menu-hamburger    
           .navbar-brand
            = link_to "Panorama", root_path, id:"logotipo" 
           
-        .collapse.navbar-collapse#navButton
+        .collapse.navbar-collapse.navButton
           ul.nav.navbar-nav.navbar-right
             li = link_to "Sobre", about_path, id:"info"
     
