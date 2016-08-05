@@ -1,3 +1,20 @@
 class DashboardController < ApplicationController
-  layout "dashboard_admin"
+  layout "dashboard"
+
+  def admin
+  
+  end
+
+  def aluno
+
+  end
+
+  def coordenador
+
+  end
+
+  def orientador
+
+  end
+
 end

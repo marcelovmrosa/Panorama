@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'static#home'
   get 'about' => 'static#about'
   get 'admin' => 'dashboard#admin'
   get 'aluno' => 'dashboard#aluno'
   get 'coordenador' => 'dashboard#coordenador'
   get 'orientador' => 'dashboard#orientador'
-  devise_for :users
-
 
 
 
