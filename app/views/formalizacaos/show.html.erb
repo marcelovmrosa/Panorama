@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tema:</strong>
+  <%= @formalizacao.tema %>
+</p>
+
+<p>
+  <strong>Justificativa:</strong>
+  <%= @formalizacao.justificativa %>
+</p>
+
+<p>
+  <strong>Validacao:</strong>
+  <%= @formalizacao.validacao %>
+</p>
+
+<p>
+  <strong>Motivo:</strong>
+  <%= @formalizacao.motivo %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @formalizacao.data %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @formalizacao.aluno %>
+</p>
+
+<%= link_to 'Edit', edit_formalizacao_path(@formalizacao) %> |
+<%= link_to 'Back', formalizacaos_path %>

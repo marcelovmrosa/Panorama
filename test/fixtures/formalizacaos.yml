@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tema: MyString
+  justificativa: MyText
+  validacao: false
+  motivo: MyText
+  data: 2016-08-18 22:10:24
+  aluno_id: 
+
+two:
+  tema: MyString
+  justificativa: MyText
+  validacao: false
+  motivo: MyText
+  data: 2016-08-18 22:10:24
+  aluno_id: 

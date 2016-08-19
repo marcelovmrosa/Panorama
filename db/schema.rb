@@ -11,12 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160515192249) do
+ActiveRecord::Schema.define(version: 20160814043322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "alunos", force: :cascade do |t|
+    t.string   "turma",      default: "", null: false
+    t.integer  "user_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "alunos", ["user_id"], name: "index_alunos_on_user_id", using: :btree
+
+  create_table "cursos", force: :cascade do |t|
+    t.string   "nome"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orientadors", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "orientadors", ["user_id"], name: "index_orientadors_on_user_id", using: :btree
+
+  create_table "professors", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "professors", ["user_id"], name: "index_professors_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
+    t.string   "matricula",              default: "", null: false
+    t.string   "nome",                   default: "", null: false
+    t.string   "telefone",               default: "", null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -34,4 +68,7 @@ ActiveRecord::Schema.define(version: 20160515192249) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "alunos", "users"
+  add_foreign_key "orientadors", "users"
+  add_foreign_key "professors", "users"
 end

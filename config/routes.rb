@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :formalizacaos
   devise_for :users
   root 'static#home'
   get 'about' => 'static#about'

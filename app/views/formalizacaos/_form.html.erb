@@ -1,0 +1,16 @@
+<%= simple_form_for(@formalizacao) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :tema %>
+    <%= f.input :justificativa %>
+    <%= f.input :validacao %>
+    <%= f.input :motivo %>
+    <%= f.input :data %>
+    <%= f.association :aluno %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
